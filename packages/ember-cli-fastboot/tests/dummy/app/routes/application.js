@@ -1,6 +1,7 @@
 /* eslint-disable ember/no-classic-classes, ember/no-get, prettier/prettier */
 import Route from '@ember/routing/route';
-import { inject } from '@ember/service';
+import * as serviceModule from '@ember/service';
+const inject = serviceModule.service || serviceModule.inject;
 import { readOnly } from '@ember/object/computed';
 
 export default Route.extend({
